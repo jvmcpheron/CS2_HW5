@@ -614,6 +614,22 @@ bool MyBag_String::doTest() {
         }
         // showBagContents(myBag1);
     }
+
+    //TESTING CONTAINS AND REMOVE ALL
+
+    myBag2.add("twenty");
+    if (!myBag2.contains("twenty")){
+        cerr << "Incorrect contains function";
+        return false;
+    }
+    myBag2.removeAll("twenty");
+    if (myBag2.contains("twenty")){
+        cerr << "Incorrect remove all function";
+        return false;
+    }
+
+
+
     return true;
 }
 
